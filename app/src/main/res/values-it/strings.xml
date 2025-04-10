@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="guess_the_secret_number">Indovina il numero segreto!</string>
+    <string name="btn_roll_the_dice">Lancia il dado!</string>
+    <string name="btn_roll_toast">Il dado rotola!</string>
+</resources>
