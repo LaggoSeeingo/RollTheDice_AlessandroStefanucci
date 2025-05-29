@@ -36,8 +36,6 @@ class RollActivity : AppCompatActivity() {
         var btnVerifica : Button = findViewById(R.id.activity_roll__btnVerifica)
 
         btnVerifica.setOnClickListener(View.OnClickListener {
-            var toast = Toast.makeText(this, R.string.btn_roll_toast, Toast.LENGTH_LONG)
-            toast.show()
             verify()
         })
 
@@ -45,9 +43,9 @@ class RollActivity : AppCompatActivity() {
 
     private fun verify(){
 
-        val message = intent.getStringExtra("Numero")
+        val message = intent.getStringExtra("NUMERO")
 
-        val risultato = when(message){
+        val txtRisultato = when(message){
             "1" -> "Numero dispari, hai perso..."
             "2" -> "Numero pari! Hai vinto!"
             "3" -> "Numero dispari, hai perso..."
@@ -56,10 +54,16 @@ class RollActivity : AppCompatActivity() {
             else -> "Numero pari! Hai vinto!"
         }
 
+        val imgVerifica = when(txtRisultato){
+            "Numero dispari, hai perso..." -> R.drawable.sadpinkpanther
+            else -> R.drawable.happypinkpanther
+        }
+
+
 
         val intentVerifica = Intent(this, VerificaActivity::class.java).apply{
-            putExtra("IMG", 0 /*da modificare */)
-            putExtra("TXT", risultato)
+            putExtra("IMG", imgVerifica)
+            putExtra("TXT", txtRisultato)
         }
         startActivity(intentVerifica)
     }
