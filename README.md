@@ -82,7 +82,7 @@ Activity a cui si accede dopo aver lanciato il dado, visualizza il risultato, l'
 La funzione:
 - Recupera il numero estratto dal bundle dell'intent istanziato dalla funzione rollDice()
 - Legge il numero estratto e assegna alla variabile txtRisultato un valore string che annuncia la vittoria o la sconfitta
-- In base all'esito (vittoria se il numero è pari o sconfitta se è dispari), assegna alla variabile imgVerifica la risorsa della pantera rosa felice o triste
+- In base all'esito (vittoria se il numero è pari o sconfitta se è dispari), assegna alla variabile imgVerifica la risorsa della Pantera Rosa felice o triste
 
 ### 3. VerificaActivity
 Mostra l'esito
